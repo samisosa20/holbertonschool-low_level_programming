@@ -13,7 +13,10 @@ int main(void)
 	{
 		putchar((i / 10) + '0');
 		putchar((i % 10) + '0');
-		printf(", ");
+		if (i < 99)
+		{
+			printf(", ");
+		}
 	}
 	putchar('\n');
 	return (0);
