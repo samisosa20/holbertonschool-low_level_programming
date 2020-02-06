@@ -13,11 +13,11 @@ int main(void)
 	{
 		j = i / 10;
 		k = i % 10;
-		if (j != k && k!=0 && j < k)
+		if (k != 0 && j < k)
 		{
 			putchar(j + '0');
 			putchar(k + '0');
-			if (i < 98)
+			if (i < 89)
 			{
 				putchar(',');
 				putchar(' ');
