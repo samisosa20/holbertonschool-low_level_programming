@@ -18,9 +18,9 @@ int main(void)
 		a = b;
 		b = res;
 		if (i != 49)
-			printf("%ld, ", res);
+			printf("%lu, ", res);
 		else
-			printf("%ld\n", res);
+			printf("%lu\n", res);
 	}
 	return (0);
 }
