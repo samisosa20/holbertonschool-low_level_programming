@@ -12,7 +12,7 @@ int main(void)
 	res = sum = 0;
 	a = 0;
 	b = 1;
-	while (a < 4000000 || b < 4000000)
+	for (; b < 4000000; b++)
 	{
 		if ((b % 2) == 0)
 			sum += b;
