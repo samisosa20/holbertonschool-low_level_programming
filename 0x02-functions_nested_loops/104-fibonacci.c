@@ -1,26 +1,50 @@
 #include <stdio.h>
 
 /**
-* main - prints fibonacci
-*
-* Return: 0
-*/
+ * main - prints the first 98 numbers
+ *
+ * Return:0
+ */
+
 int main(void)
 {
-	unsigned long i, a, b, res;
+	long a, b, x, res, sum_ac, sum_bd;
+	long spt_a, spt_b, spt_c, spt_d;
 
-	res = 0;
 	a = 0;
 	b = 1;
-	for (i = 0; i < 98; i++)
+	for (x = 0; x < 91; x++)
 	{
 		res = a + b;
 		a = b;
 		b = res;
-		if (i != 97)
-			printf("%lu, ", res);
+		printf("%ld, ", res);
+	}
+	spt_a = a / 10000000000;
+	spt_b = a % 10000000000;
+	spt_c = b / 10000000000;
+	spt_d = b % 10000000000;
+	for (; x < 98; x++)
+	{
+		sum_ac = spt_a + spt_c;
+		sum_bd = spt_b + spt_d;
+		if (sum_bd > 10000000000)
+		{
+			sum_bd %= 10000000000;
+			sum_ac++;
+		}
+		if (x != 97)
+		{
+			printf("%ld%ld, ", sum_ac, sum_bd);
+			spt_a = spt_c;
+			spt_b = spt_d;
+			spt_c = sum_ac;
+			spt_d = sum_bd;
+		}
 		else
-			printf("%lu\n", res);
+		{
+			printf("%ld%ld\n", sum_ac, sum_bd);
+		}
 	}
 	return (0);
 }
