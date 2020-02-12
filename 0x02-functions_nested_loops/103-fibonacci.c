@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* main - prints fibonacci
+* main - prints fibonacci until 4M
 *
 * Return: 0
 */
