@@ -1,9 +1,8 @@
 #include "holberton.h"
 
 /**
-* print_triangle - Where n is the number of times the character
-* \ should be printed.
-* @n: number to print \.
+* print_triangle - print to triangle with #.
+* @size: size to print #.
 * Return: Always 0.
 */
 void print_triangle(int size)
