@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
-* print_diagonal - Where n is the number of times the character \ should be printed.
-* @n: number to print _.
+* print_diagonal - Where n is the number of times the character
+* \ should be printed.
+* @n: number to print \.
 * Return: Always 0.
 */
 void print_diagonal(int n)

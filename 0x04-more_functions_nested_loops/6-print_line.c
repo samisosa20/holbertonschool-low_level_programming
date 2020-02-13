@@ -1,7 +1,8 @@
 #include "holberton.h"
 
 /**
-* print_line - Where n is the number of times the character _ should be printed.
+* print_line - Where n is the number of times the character
+* _ should be printed.
 * @n: number to print _.
 * Return: Always 0.
 */
