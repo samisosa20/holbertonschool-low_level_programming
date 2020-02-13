@@ -10,7 +10,7 @@ void print_number(int n)
 {
 	int aux = 0;
 
-	if ( n == INT_MIN)
+	if (n == INT_MIN)
 	{
 		n = n + 1;
 		aux = 1;
@@ -26,10 +26,7 @@ void print_number(int n)
 		print_number(n / 10);
 
 	if (aux == 1)
-	{
-		 n = 8;
-		_putchar(n % 10 + '0');
-	}
+		_putchar('8');
 	else
 		_putchar(n % 10 + '0');
 }
