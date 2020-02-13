@@ -9,13 +9,14 @@
 
 int main(void)
 {
-	long number, d, aux;
+	long number, d;
 
-	number = aux = 612852475143;
+	number = 612852475143;
 	for (d = 2; d < sqrt(number); d++)
 	{
-		if (aux % d == 0)
+		if (number % d == 0)
 		{
+			/*printf("%ld / %ld - ", number, d);*/
 			number = number / d;
 			d = 1;
 		}
