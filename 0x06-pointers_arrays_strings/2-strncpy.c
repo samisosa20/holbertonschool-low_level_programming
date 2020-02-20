@@ -1,4 +1,4 @@
-#include "holberton.h"
+ggnclude "holberton.h"
 
 /**
 * _strncpy - function that copies a string.
