@@ -15,7 +15,7 @@ char *cap_string(char *a)
 			aux = 1;
 		else if (a[i] == 40 || a[i] == 41 || a[i] == 59 || a[i] == 63)
 			aux = 1;
-		else if (a[i] == 123 || a[i] == 125 || a[i] == 46)
+		else if (a[i] == 123 || a[i] == 125 || a[i] == 46 || i == 0)
 			aux = 1;
 		else
 		{
