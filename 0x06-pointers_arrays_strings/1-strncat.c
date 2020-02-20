@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 
 /**
 * _strncat - appends the src string to the dest string.
@@ -10,11 +9,15 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-	size_t dest_len = strlen(dest);
-	size_t i;
-	size_t m = n;
+	int dest_len = 0;
+	int i;
 
-	for (i = 0 ; i < m && src[i] != '\0' ; i++)
+	while (dest[dest_len] != '\0')
+	{
+		dest_len++;
+	}
+
+	for (i = 0 ; i < n && src[i] != '\0' ; i++)
 		dest[dest_len + i] = src[i];
 	dest[dest_len + i] = '\0';
 
