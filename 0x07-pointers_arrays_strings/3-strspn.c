@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
-* _strchr - a function that locates a character in a string
+* _strspn - a function that gets the length of a prefix substring
 * @s: pointer that locate a character.
-* @c: character.
+* @accept: character.
 * Return: pointer.
 */
 unsigned int _strspn(char *s, char *accept)
