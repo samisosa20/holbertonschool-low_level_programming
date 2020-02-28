@@ -10,37 +10,26 @@
 */
 int main(int argc, char *argv[])
 {
-	int count, multi = 0;
+	int count, multi = 0, num;
+	int a[5] = {25, 10, 5, 2, 1};
 
 	if (argc > 1)
 	{
-		for (count = 1; count < argc; count++)
+		num = atoi(argv[1]);
+		for (count = 0; count < 5 || num != 0; count++)
 		{
-			if (isdigit(*argv[count]))
+			if (num / a[count] != 0)
 			{
-				if (atoi(argv[count]) % )
-				{
-					multi = multi + atoi(argv[count]);
-				}
-				else
-				{
-					printf("Error\n");
-					return (1);
-				}
+				multi += num / a[count];
+				num = num % a[count];
 			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-
 		}
 		printf("%d\n", multi);
+		return (0);
 	}
 	else
 	{
-		printf("0\n");
+		printf("Error\n");
+		return (1);
 	}
-
-	return (0);
 }
