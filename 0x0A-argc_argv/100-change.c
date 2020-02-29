@@ -13,7 +13,12 @@ int main(int argc, char *argv[])
 	int count, multi = 0, num;
 	int a[5] = {25, 10, 5, 2, 1};
 
-	if (argc >= 2)
+	if (argc < 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else
 	{
 		num = atoi(argv[1]);
 		for (count = 0; count < 5 || num != 0; count++)
@@ -24,12 +29,7 @@ int main(int argc, char *argv[])
 				num = num % a[count];
 			}
 		}
-		printf("%d\n", multi);
-		return (0);
 	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
+	printf("%d\n", multi);
+	return (0);
 }
