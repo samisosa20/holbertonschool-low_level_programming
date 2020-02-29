@@ -17,15 +17,7 @@ int main(int argc, char *argv[])
 		{
 			if (isdigit(*argv[count]))
 			{
-				if (atoi(argv[count]) >= 0)
-				{
-					multi += atoi(argv[count]);
-				}
-				else
-				{
-					printf("Error\n");
-					return (1);
-				}
+				multi += atoi(argv[count]);
 			}
 			else
 			{
@@ -35,11 +27,10 @@ int main(int argc, char *argv[])
 
 		}
 		printf("%d\n", multi);
-		return (0);
 	}
 	else
 	{
 		printf("0\n");
-		return (0);
 	}
+	return (0);
 }
