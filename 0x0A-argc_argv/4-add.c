@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int count, multi = 0;
 
-	if (argc > 2)
+	if (argc > 1)
 	{
 		for (count = 1; count < argc; count++)
 		{
