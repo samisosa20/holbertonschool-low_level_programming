@@ -9,28 +9,21 @@
 */
 int main(int argc, char *argv[])
 {
-	int count, multi = 0;
+	int x, y, add;
 
-	if (argc < 2)
+	for (x = 1; x < argc; x++)
 	{
-		printf("0\n");
-	}
-	else
-	{
-		for (count = 1; count <= argc; count++)
+		for (y = 0; argv[x][y] != '\0'; y++)
 		{
-			if (isdigit(*argv[count]))
-			{
-				multi += atoi(argv[count]);
-			}
-			else
+			if (!isdigit(argv[x][y]))
 			{
 				printf("Error\n");
 				return (1);
 			}
-
 		}
-		printf("%d\n", multi);
+		add += atoi(argv[x]);
 	}
+	printf("%i\n", add);
 	return (0);
+
 }
