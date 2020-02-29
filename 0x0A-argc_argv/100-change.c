@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int count, multi = 0, num;
 	int a[5] = {25, 10, 5, 2, 1};
 
-	if (argc > 1)
+	if (argc >= 2)
 	{
 		num = atoi(argv[1]);
 		for (count = 0; count < 5 || num != 0; count++)
