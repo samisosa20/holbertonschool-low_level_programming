@@ -16,11 +16,11 @@ int main(int argc, char *argv[])
 		for (count = 1; count < argc; count++)
 			multi = multi * atoi(argv[count]);
 		printf("%d\n", multi);
+		return (0);
 	}
 	else
 	{
 		printf("Error\n");
+		return (1);
 	}
-
-	return (0);
 }
