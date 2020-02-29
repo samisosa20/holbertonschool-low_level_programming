@@ -10,8 +10,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int count, multi = 0, num = 0;
-	int a[5] = {25, 10, 5, 2, 1};
+	int count, change = 0;
 
 	if (argc < 2)
 	{
@@ -20,16 +19,21 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		num = atoi(argv[1]);
-		for (count = 0; count < 5; count++)
+		change = atoi(argv[1]);
+		for (count = 0; change > 0; count++)
 		{
-			if (num / a[count] != 0)
-			{
-				multi += num / a[count];
-				num = num % a[count];
-			}
+			if (change - 25 >= 0)
+				change = change - 25;
+			else if (change - 10 >= 0)
+				change = change - 10;
+			else if (change - 5 >= 0)
+				change = change - 5;
+			else if (change - 2 >= 0)
+				change = change - 2;
+			else if (change - 1 >= 0)
+				change = change - 1;
 		}
 	}
-	printf("%d\n", multi);
+	printf("%d\n", count);
 	return (0);
 }
