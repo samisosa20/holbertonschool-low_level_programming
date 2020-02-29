@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 			{
 				if (atoi(argv[count]) >= 0)
 				{
-					multi = multi + atoi(argv[count]);
+					multi += atoi(argv[count]);
 				}
 				else
 				{
