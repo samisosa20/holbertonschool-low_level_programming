@@ -8,7 +8,7 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, l;
+	unsigned int i, j, l;
 	char *a;
 
 	if (s1 == NULL)
@@ -28,9 +28,9 @@ char *str_concat(char *s1, char *s2)
 	a = malloc((j + i + 1) * sizeof(char));
 	if (a == NULL)
 		return (NULL);
-	for (l = 0; l < i; i++)
+	for (l = 0; l < i; l++)
 		a[l] = s1[l];
-	for (l = 0; l < j; j++)
+	for (l = 0; l < j; l++)
 		a[i + l] = s2[l];
 	a[i + j] = '\0';
 	return (a);
