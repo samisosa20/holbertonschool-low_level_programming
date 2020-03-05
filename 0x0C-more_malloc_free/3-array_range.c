@@ -18,7 +18,7 @@ int *array_range(int min, int max)
 	a = malloc(comp * sizeof(int));
 	if (a == NULL)
 		return (NULL);
-	for (i = 0; i <= comp; i++, min++)
+	for (i = 0; i < comp; i++, min++)
 		a[i] = min;
 	return (a);
 }
