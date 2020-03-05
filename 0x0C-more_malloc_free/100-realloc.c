@@ -2,16 +2,17 @@
 #include <stdlib.h>
 
 /**
-* array_range - function that creates an array of integers.
-* @min: min number.
-* @max: max number.
-* Return: pointer.
+* _realloc - function that reallocates a memory
+* block using malloc and free.
+* @ptr: pointer.
+* @old_size: old size.
+* @new_size: new size.
+* Return: pointer void.
 */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	unsigned int i;
-	void *a;
-	char *aux, *aux_a;
+	char *a, *aux_ptr;
 
 	if (old_size == new_size)
 		return (ptr);
@@ -28,16 +29,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 
-	aux = ptr;
-	a = malloc(sizeof(aux) * new_size);
-	if(a == NULL)
+	a = malloc(new_size);
+	if (a == NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	aux_a = a;
-	for (i = 0; i < old_size && i < new_size; i++, aux++)
-		aux_a[i] = *aux;
+
+	aux_ptr = ptr;
+	for (i = 0; i < old_size && i < new_size; i++, aux_ptr++)
+		a[i] = *aux_ptr;
 	free(ptr);
 	return (a);
 }
