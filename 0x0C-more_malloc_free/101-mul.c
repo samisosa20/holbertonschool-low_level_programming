@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	{
 		for (count = 1; count < argc; count++)
 		{
-			if(atoi(argv[count]) >= 100 || atoi(argv[count]) < 0)
+			if (atoi(argv[count]) >= 100 || atoi(argv[count]) < 0)
 			{
 				printf("Error\n");
 				exit(98);
