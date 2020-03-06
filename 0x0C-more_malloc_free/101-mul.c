@@ -11,12 +11,7 @@ int main(int argc, char *argv[])
 {
 	int count, multi = 1;
 
-	if (argc == 1)
-	{
-		printf("0\n");
-		return (0);
-	}
-	else if (argc == 1)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		exit(98);
@@ -25,11 +20,6 @@ int main(int argc, char *argv[])
 	{
 		for (count = 1; count < argc; count++)
 		{
-			if (atoi(argv[count]) >= 100 || atoi(argv[count]) < 10)
-			{
-				printf("Error\n");
-				exit(98);
-			}
 			multi = multi * atoi(argv[count]);
 		}
 		printf("%d\n", multi);
