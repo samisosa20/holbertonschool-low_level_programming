@@ -9,5 +9,6 @@
 */
 void free_dog(struct dog *d)
 {
-	free(d);
+	if (d)
+		free(d);
 }
