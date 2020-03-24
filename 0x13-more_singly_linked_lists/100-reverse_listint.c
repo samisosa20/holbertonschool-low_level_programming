@@ -1,17 +1,22 @@
 #include "lists.h"
 /**
- * free_listint - function that frees a listint_t list
+ * reverse_listint - function that reverses
+ * a listint_t linked list
  * @head: address
- * Return: Nro elements.
+ * Return: address.
  */
-void free_listint(listint_t *head)
+listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *aux;
+	listint_t *aux = *head;
+	listint_t *new = *head;
 
-	while (head)
+	*head = NULL;
+	while (new)
 	{
-		aux = head->next;
-		free(head);
-		head = aux;
+		aux = aux->next;
+		new->next = *head;
+		*head = new;
+		new = aux;
 	}
+	return (*head);
 }

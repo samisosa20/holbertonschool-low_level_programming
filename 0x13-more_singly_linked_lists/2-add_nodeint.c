@@ -1,22 +1,24 @@
 #include "lists.h"
 /**
- * reverse_listint - function that reverses
- * a listint_t linked list
+ * add_nodeint -  function that adds a new node
+ * at the beginning of a listint_t list
  * @head: address
- * Return: address.
+ * @n: pointer to insert
+ * Return: Nro elements.
  */
-listint_t *reverse_listint(listint_t **head)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *aux = *head;
-	listint_t *new = *head;
+	listint_t *new;
 
-	*head = NULL;
-	while (new)
-	{
-		aux = aux->next;
-		new->next = *head;
-		*head = new;
-		new = aux;
-	}
-	return (*head);
+	if (head == NULL)
+		return (NULL);
+
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->next = *head;
+	*head = new;
+	return (new);
 }
