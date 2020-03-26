@@ -7,23 +7,28 @@
 */
 void print_binary(unsigned long int n)
 {
-	long int i = 0, j;
-	char p[1000] = {'\0'};
+	int i = 0, count, k, aux;
 
 	if (n == 0)
 	{
-		_putchar('0');
+		printf("0");
+		return;
 	}
-	while (n > 0)
+
+	aux = n;
+
+	while (aux != 0)
 	{
-		p[i] = n % 2;
-		n /= 2;
 		i++;
+		aux = aux >> 1;
 	}
-	j = i - 1;
-	while (j >= 0)
+
+	for (count = i - 1; count >= 0; count--)
 	{
-		_putchar(p[j] + '0');
-		j--;
+		k = n >> count;
+		if (k & 1)
+			_putchar('1');
+		else
+			_putchar('0');
 	}
 }
