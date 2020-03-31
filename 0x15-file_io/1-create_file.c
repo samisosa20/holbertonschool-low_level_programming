@@ -31,7 +31,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	of = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (of == -1)
-		return (0);
+		return (-1);
 	if (text_content != NULL)
 	{
 		leng = _strlen(text_content);
@@ -41,7 +41,6 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	cf = close(of);
 	if (cf == -1)
-		return (0);
-	
+		return (-1);
 	return (1);
 }
