@@ -1,9 +1,9 @@
-## 0x15-file_io
+# 0x15-file_io
 
-# Learning Objectives
+## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-# General
+## General
 Look for the right source of information online
 How to create, open, close, read and write files
 What are file descriptors
@@ -14,9 +14,9 @@ What are file permissions, and how to set them when creating a file with the ope
 What is a system call
 What is the difference between a function and a system call
 
-## Projects
+# Projects
 
-# 0-read_textfile.c
+## 0-read_textfile.c
 
 Write a function that reads a text file and prints it to the POSIX standard output.
 
@@ -27,7 +27,7 @@ if the file can not be opened or read, return 0
 if filename is NULL return 0
 if write fails or does not write the expected amount of bytes, return 0
 
-# 1-create_file.c
+## 1-create_file.c
 
 Create a function that creates a file.
 
@@ -39,7 +39,7 @@ if the file already exists, truncate it
 if filename is NULL return -1
 if text_content is NULL create an empty file
 
-# 2-append_text_to_file.c
+## 2-append_text_to_file.c
 
 Write a function that appends text at the end of a file.
 
@@ -51,7 +51,7 @@ If filename is NULL return -1
 If text_content is NULL, do not add anything to the file. Return 1 if the file exists and -1 if the file does not 
 exist or if you do not have the required permissions to write the file
 
-# 3-cp.c
+## 3-cp.c
 
 Write a program that copies the content of a file to another file.
 
