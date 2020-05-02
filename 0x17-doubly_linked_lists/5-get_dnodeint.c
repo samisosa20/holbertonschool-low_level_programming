@@ -1,9 +1,11 @@
 #include "lists.h"
 
 /**
- * get_dnodeint_at_index -
- *
- * Return: 
+ * get_dnodeint_at_index - function that returns the nth node
+ * of a dlistint_t linked list
+ * @head: address list
+ * @index: index
+ * Return: position
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
