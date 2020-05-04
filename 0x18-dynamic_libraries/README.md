@@ -41,6 +41,7 @@ What you should learn from this project:
 6. finally compile progam with extension .o and dynamic library
 
 ```gcc -o exe <program>.o <library>.so```
+
 ---
 
 ### [0. A library is not a luxury but one of the necessities of life](./libholberton.so)
