@@ -20,27 +20,27 @@ What you should learn from this project:
 
 1. compile all file with extension .c with the next command
 
-´gcc -fPIC -c *.c´
+```gcc -fPIC -c *.c```
 
 2. create file .so with the enxt command
 
-´gcc -shared -o <name file>.so *.o´
+```gcc -shared -o <name file>.so *.o```
 
 3. copy or move the file .so in /usr/lib/
 
-´sudo cp <name file>.so /usr/lib/´
+```sudo cp <name file>.so /usr/lib/```
 
 4. config library
 
-´sudo ldconfig´
+```sudo ldconfig```
 
 5. compile the program with extension .o
 
-´gcc -c <program file>.c´
+```gcc -c <program file>.c```
 
 6. finally compile progam with extension .o and dynamic library
 
-´gcc -o exe <program>.o <library>.so´
+```gcc -o exe <program>.o <library>.so```
 ---
 
 ### [0. A library is not a luxury but one of the necessities of life](./libholberton.so)
